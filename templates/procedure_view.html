@@ -1,0 +1,23 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title%} {{procedure.procedure_name}} {% endblock %}
+{% block body %}
+<br><br><br><br>
+<div class="container my-4">
+    <div class="row">
+        
+        <div class="col-md-10">
+            <h3><b>{{procedure.procedure_name}}</b></h3>
+            <br>
+            <h4 style="color: darkblue">Overview</h4><p>{{procedure.overview}}</p>
+            <br>
+            <h4 style="color: darkblue">Why it's done?</h4><p>{{procedure.why_its_done}}</p>
+        
+            <h4 style="color: darkblue">Risks</h4><p>{{procedure.risks}}</p>
+            <br>
+            <h4 style="color: darkblue">Results</h4><p>{{procedure.results}}</p>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

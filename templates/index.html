@@ -1,0 +1,368 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} Welcome to GetYourMed {% endblock %}
+
+
+{% block body %}
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url(/static/store/assets/img/slide/GettyImages.jpg)">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Care at Home</span></h2>
+                            <p class="animate__animated animate__fadeInUp">Care at Home is now offering telehealth for
+                                new and existing patients, including two-way video and telephone visits. You and your
+                                loved ones can have the convenience of seeing your provider, from the comfort of your
+                                own home</p>
+                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: url(/static/store/assets/img/slide/taker.jpg)">
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animate__animated animate__fadeInDown">Immediate Assistance</h2>
+                            <p class="animate__animated animate__fadeInUp">Click the button below to call an ambulance,
+                                fire brigade or police.</p>
+                            <a href="#about"
+                                class="btn-get-started animate__animated animate__fadeInUp scrollto">Emergency</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 
+        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+              <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+            </div>
+          </div>
+        </div>-->
+
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="row content">
+                    <div class="col-lg-6">
+                        <h2>Care at Home</h2>
+                        <h3>Our purpose:</h3>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <p>
+                            Care at Home is undergoing bold expansion, modernization and enhancement that reflects our
+                            promise to meet the changing healthcare needs of our community.This indigenous healthcare
+                            startup thrived in native soil is a vital regional health network today that serves in over
+                            6 regions.
+
+                            Today, the Care at Home purpose remains steadfast: respond to our communities, their
+                            families and their healthcare demands with the highest possible level of medical
+                            professionalism, advanced technology, and professional care.
+                        </p>
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> Certified Doctors and Specialists </li>
+                            <li><i class="ri-check-double-line"></i> Certified Hospital Collaboration</li>
+                            <li><i class="ri-check-double-line"></i> Safe and Secure for private User data</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients section-bg">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'store/assets/img/clients/download.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'store/assets/img/clients/baps.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'store/assets/img/clients/sal.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'store/assets/img/clients/zydus.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'store/assets/img/clients/eyeq.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="{% static 'store/assets/img/clients/civil.png' %}" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Clients Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Service</h2>
+                    <p>The Services We Offer</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="icon-box">
+                            <i class="icofont-capsule"></i>
+                            <h4><a href="#">Healthcare E-Commerce</a></h4>
+                            <p>Purchase medicines and other healthcare products</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <i class="icofont-prescription"></i>
+                            <h4><a href="#">Get Doctor's appointment</a></h4>
+                            <p>Schedule an appointment with your doctor </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <i class="icofont-doctor-alt"></i>
+                            <h4><a href="#">Hire Doctors or Nurses</a></h4>
+                            <p>Hire specialists that provide assistance at home</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <i class="icofont-ui-video-chat"></i>
+                            <h4><a href="#">Online Checkups</a></h4>
+                            <p>Get two-way video and telephone visits</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <i class="icofont-card"></i>
+                            <h4><a href="#">Healthcare Cards</a></h4>
+                            <p>Get a personalised card which provides your medical history in case of emergency, get
+                                discounts on products and more</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <i class="icofont-ambulance-cross"></i>
+                            <h4><a href="#">Get immediate assistance</a></h4>
+                            <p>Immediate ambulance, fire brigade or police service just one tap away</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+
+        <!-- ======= Portfolio Section ======= 
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Recent Works</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>-->
+        </section><!-- End Portfolio Section -->
+
+    </main><!-- End #main -->
+
+{% endblock %}
+
+
+{% block js %}
+<script>
+  {% if save %}
+  alert("Your profile is updated successfully.")
+  document.location="/";
+  {% endif %}
+  {% if thank %}
+  alert("Thank you for Contact Us. We will try to respond as early as possible.")
+  document.location="/";
+  {% endif %}
+</script>
+</script>
+
+{% endblock %}

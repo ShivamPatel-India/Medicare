@@ -1,0 +1,23 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title%} {{condition.condition_name}} {% endblock %}
+{% block body %}
+<br><br><br><br>
+<div class="container my-4">
+    <div class="row">
+        
+        <div class="col-md-10">
+            <h3><b>{{condition.condition_name}}</b></h3>
+            <br>
+            <h4 style="color: darkblue">Overview</h4><p>{{condition.overview}}</p>
+            <br>
+            <h4 style="color: darkblue">Symptoms</h4><p>{{condition.symptoms}}</p>
+        
+            <h4 style="color: darkblue">Causes</h4><p>{{condition.causes}}</p>
+            <br>
+            <h4 style="color: darkblue">Complications</h4><p>{{condition.complications}}</p>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

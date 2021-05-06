@@ -1,0 +1,49 @@
+{% extends 'basic.html' %}
+{% block title%}Items Checkout{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="col my-4">
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2><strong>Your order status</strong></h2>
+                </div>
+
+            </div>
+        </section>
+        <div class="my-4">
+            {% ifequal updates|length 0 %}
+            <ul class="list-group" id="items">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    No order has been placed till now.
+                </li>
+            </ul>
+            {% else %}
+            {% for i,j in updates %}
+            <ul class="list-group" id="items" style="list-style-type:disc">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="badge badge-success"><h5><strong>Order Date : </strong>{{i.timestamp}}</h5></span>
+                    <span class="badge badge-primary"><h6><strong>Total Amount : </strong>{{i.total_amount}} Rs.</h6></span>
+                </li>
+                <ul class="list-group" id="items" style="list-style-type:disc">
+                    {% for key,value in j.items %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{value.1}}
+                        <span class="badge badge-primary badge-pill">Qty : {{value.0}}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <strong>Status : {{i.update_desc}}</strong>
+                </li>
+                <hr>
+            </ul>
+            <br>
+            {% endfor %}
+            {% endifequal %}
+        </div>
+
+    </div>
+</div>
+{% endblock %}

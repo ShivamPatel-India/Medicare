@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>GetYourMed Sign up</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'accounts/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'accounts/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #999999;">
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="col-lg-4"></div>
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form" method="POST">
+					{% csrf_token %}
+					<span class="login100-form-title p-b-59">
+						Edit Your Details
+					</span>
+
+					{% if err %}
+					<div class="alert alert-danger" role="alert">
+						{{err}}
+					</div>
+					{% endif %}
+
+					<div class="wrap-input100 validate-input" data-validate="First Name is required">
+						<span class="label-input100">First Name</span>
+						<input class="input100" type="text" name="first_name" 
+						value="{{user.first_name}}" placeholder="First Name" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Last Name is required">
+						<span class="label-input100">Last Name</span>
+						<input class="input100" type="text" name="last_name" 
+						value="{{user.last_name}}" placeholder="Last Name" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Contact Number is required">
+						<span class="label-input100">Contact Number</span>
+						<input class="input100" type="text" name="contact_no" 
+						value="{{user.contact_no}}" placeholder="Contact Number"
+						title="Contact number must be of 10 digits"
+						pattern="[789][0-9]{9}" required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="your_email" placeholder="Email address" 
+						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+						value="{{user.email}}"
+						required>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								SAVE
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+<!--===============================================================================================-->
+	<script src="{% static 'accounts/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'accounts/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'accounts/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'accounts/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'accounts/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'accounts/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'accounts/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'accounts/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'accounts/js/main.js' %}"></script>
+
+</body>
+</html>
+

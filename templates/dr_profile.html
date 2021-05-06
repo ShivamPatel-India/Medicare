@@ -1,0 +1,46 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title%} {{doctor.last_name}} {% endblock %}
+{% block body %}
+<br><br><br><br>
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row">
+                <img src="/media/{{doctor.profile_picture}}" width="233px" height="385px">
+            </div>
+            <div class="row">
+                <!-- <button class="btn btn-primary mx-2">Buy Now</button> -->
+                <!-- <span id="divsp{{doctor.id}}" class="divsp"> -->
+                    <!-- <button id="sp{{doctor.id}}" class="btn btn-primary mx-7 cart">Add To Cart
+                    </button> -->
+                </span>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3><b>Dr.{{doctor.first_name}} {{doctor.last_name}}</b></h3>
+            <br>
+            <!-- <p style="color: crimson;"><b>Dr.{{doctor.first_name}} {{doctor.last_name}}</b></p> -->
+            <h4 style="color: darkblue">Overview</h4><p>{{doctor.bio}}</p>
+            <br>
+            <h4 style="color: darkblue">Department</h4><p>{% for dept in doctor.department.all %}<li>{{dept}}</li><br>{% endfor %}</p>
+        
+            <h4 style="color: darkblue">Area of Focus</h4><p>{{doctor.area_of_focus}}</p>
+            <br>
+            <h4 style="color: darkblue">Hospitals</h4>
+            <p>{% for hospital in doctor.hospital.all %}
+                <li>{{hospital}}<br>
+                    Address : {{hospital.address}}<br>
+                    Contact : {{hospital.contact_no}}
+                </li>
+                <br>
+                {% endfor %}
+            </p>
+            <h4 style="color: darkblue">Education</h4><p>{{doctor.education}}</p>
+            <h4 style="color: darkblue">Awards and Honours</h4><p>{{doctor.awards}}</p>
+            <h4 style="color: darkblue">Condition treated</h4><p>{% for condition in doctor.condition_trated.all %}<li><a href="/doctors/findDr/cnview/{{condition.id}}">{{condition}}</a></li><br>{% endfor %}</p>
+            <h4 style="color: darkblue">Procedures Performed</h4><p>{% for procedure in doctor.procedures_performed.all %}<li><a href="/doctors/findDr/prview/{{procedure.id}}">{{procedure}}</a></li><br>{% endfor %}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

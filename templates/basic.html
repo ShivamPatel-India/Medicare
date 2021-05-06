@@ -1,0 +1,272 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>{% block title %} {% endblock %}</title>
+    <style>
+        {% block css %} {% endblock %}
+    </style>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css
+   " integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link href="{% static 'store/assets/img/favicon.png' %}" rel="icon">
+    <link href="{% static 'store/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'store/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'store/assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+    <link href="{% static 'store/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'store/assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'store/assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'store/assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+    <link href="{% static 'store/assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'store/assets/css/style.css' %}" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- =======================================================
+  * Template Name: Sailor - v2.3.0
+  * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo"><a href="/">medicare</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
+
+                <ul>
+                    <li class="active"><a href="/">Home</a></li>
+
+                    <li class="drop-down"><a href="/healthcare_products">Store</a>
+                        <ul>
+                            <li><a href="/pharmacy/order_med">Medicines</a></li>
+                            <li><a href="/healthcare_products">Healthcare Products</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="/doctors/findDr">Find a Doctor</a></li>
+                    <!-- <li><a href="portfolio.html">Patient Portal</a></li> -->
+                    <!-- <li><a href="pricing.html">Patient Guide</a></li> -->
+                    <li><a href="/aboutUs">About Us</a></li>
+                    <li><a href="/accounts/contact_us">Contact Us</a></li>
+                    {% if not request.session.customer_id %}
+                    <li class="drop-down"><a href="#">User</a>
+                        <ul>
+                            <li><a href="/accounts/login">Login</a></li>
+                            <li><a href="/accounts/register">Sign Up</a></li>
+                        </ul>
+                    </li>&nbsp;
+                    {% else %}
+                    <li class="drop-down"><a href="/accounts/profile">Hi,{{request.session.customer_fname}}</a>
+                        <ul>
+                            <li><a href="/accounts/profile">Your Profile</a></li>
+                            <li><a href="/orders/tracker">Your Orders</a></li>
+                            <li><a href="/accounts/logout">Logout</a></li>
+                        </ul>
+                    </li>&nbsp;
+                    {% endif %}
+                       
+
+
+                </ul>
+
+            </nav><!-- .nav-menu -->
+            <button id="popcart" type="button" data-html="true" class="btn btn-secondary mx-auto"
+                data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom">
+                Cart(<span id="cart">0</span>)
+            </button </div>
+    </header>
+
+    {% block body %} {% endblock %}
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>Care at Home</h3>
+                            <p>
+                                26, xyz colony <br>
+                                PQR, India<br><br>
+                                <strong>Phone:</strong> +1 5589 55488 55<br>
+                                <strong>Email:</strong> info@example.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="about2.html">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="find_dr.html">Find a Doctor</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Patient Portal</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Emergency</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Heathcare Card</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="testimonials2.html">Buy Products</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Online Checkup</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Subscribe to our Newsletter </p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Care at Home</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'store/assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'store/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'store/assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'store/assets/vendor/php-email-form/validate.js' %}"></script>
+    <script src="{% static 'store/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'store/assets/vendor/venobox/venobox.min.js' %}"></script>
+    <script src="{% static 'store/assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'store/assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Bootstrap JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <!-- Template Main JS File -->
+    <script src="{% static 'store/assets/js/main.js' %}"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+    {% block js %}
+    <script>
+        if (localStorage.getItem('cart') == null) {
+            var cart = {};
+        }
+        else {
+            cart = JSON.parse(localStorage.getItem('cart'));
+        }
+
+        var sum = 0;
+        for (var item in cart) {
+            let name = cart[item][1];
+            let qty = cart[item][0];
+            sum = sum + qty;
+        }
+        document.getElementById('cart').innerHTML = sum;
+
+        //Popover of cart
+        $('#popcart').popover();
+        updatePopover(cart);
+
+        function updatePopover(cart) {
+            var popStr = "";
+            popStr = popStr + "<h5> items in your cart </h5><div class='mx-2 my-2'>";
+            var i = 1;
+            for (var item in cart) {
+                popStr = popStr + "<b>" + i + "</b>. ";
+                popStr = popStr + cart[item][1].slice(0, 19) + "... Qty: " + cart[item][0] + '<br>';
+                i = i + 1;
+            }
+            popStr = popStr + "</div><a href='/orders/checkout'><button class='btn btn-success' id ='checkout'>Checkout</button></a> <button class='btn btn-warning' onclick='clearCart()' id ='clearCart'>Clear Cart</button>"
+            document.getElementById('popcart').setAttribute('data-content', popStr);
+            $('#popcart').popover();
+        }
+
+        function clearCart() {
+            localStorage.clear();
+            cart = {};
+            updateCart(cart);
+        }
+
+        //plus minus button function
+        function updateCart(cart) {
+            var sum = 0;
+            document.getElementById('cart').innerHTML = sum;
+            updatePopover(cart);
+        }
+
+    </script>
+    {% endblock %}
+
+</body>
+
+</html>
