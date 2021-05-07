@@ -32,8 +32,8 @@ def prview(request,prid):
 def searchMatch(query,item):
     query=query.lower()
     '''return true only if query matches the item'''
-    dept=[i for i in item.department.all()]
-    print(dept)
+    # dept=[i for i in item.department.all()]
+    # print(dept)
     if query in item.last_name.lower() or query in item.area_of_focus.lower() or query in str(item.city).lower():
         return True
     else:
