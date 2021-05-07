@@ -26,7 +26,7 @@ SECRET_KEY = '0lynt9@u@(^gknl)krpw=eqoxihn!0duyizj0+e85q3gl#l@-@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','medicare-sdp.herokuapp.com']
 
 
 # Application definition
