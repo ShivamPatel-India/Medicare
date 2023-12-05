@@ -1,6 +1,6 @@
 # Medicare
 
-Medicare is an e-commerce platform for medicines and healthcare products built using Python 3.7.2 and the Django web framework.
+Medicare, a Python 3.7.2 and Django-powered e-commerce platform, provides a seamless online experience for purchasing medicines and healthcare products. Offering features real-time order tracking, an efficient admin panel, and doctor information by city, Medicare ensures a user-friendly and comprehensive healthcare shopping experience
 
 ## Project Functionality
 
